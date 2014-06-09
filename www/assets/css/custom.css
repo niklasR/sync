@@ -1,0 +1,31 @@
+body {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#main-container {
+	text-align: center;
+}
+
+.heading {
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 50px;
+}
+
+.code-outer {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.time-outer {
+	font-size: 40px;
+}
+
+.instruction {
+	font-size: 55px;
+}
+
+.countdown {
+	font-size: 55px;
+}
