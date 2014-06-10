@@ -60,7 +60,7 @@ if ($_POST['form_submitted'] === "1") {
 				<tbody>
 				<?php foreach(getAddedRecords() as $a): ?>
 					<tr data-id="<?=e($a['id']);?>">
-						<td><?=e($a['code']);?></td>
+						<td><?=e(str_pad($a['code'], 4, "0", STR_PAD_LEFT));?></td>
 						<td><input type="text" class="form-control data-name" value="<?=e($a['name']);?>"></td>
 						<td><input type="text" class="form-control data-instruction" value="<?=e($a['instruction']);?>"></td>
 						<td><input type="number" class="form-control data-offset" value="<?=e($a['offset_time']);?>"></td>
