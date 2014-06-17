@@ -31,7 +31,7 @@ if ($_POST['form_submitted'] === "1") {
 	<body data-baseurl="<?=e("http://".$_SERVER['SERVER_NAME'])?>">
 		<div id="main-container" class="container">
 			<h1 class="heading">LA1:TV Sync Control</h1>
-			<? if (!is_null($addError)): ?>
+			<?php if (!is_null($addError)): ?>
 			<p class="bg-<?=$addError ? "danger" : "success"?>"><?=$addError ? "Could not find record." : "Record has been added!"?></p>
 			<?php endif; ?>
 			<div>
