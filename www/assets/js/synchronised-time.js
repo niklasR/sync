@@ -1,4 +1,5 @@
 var getSynchronisedTime = null;
+var getOffsetTime = null;
 $(document).ready(function() {
 	
 	var baseUrl = $("body").attr("data-baseurl");
