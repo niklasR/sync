@@ -31,7 +31,7 @@ function registerSession() {
 		}
 	}
 	
-	$q = $pdo->prepare("INSERT INTO sessions(session_id,code,time_seen,offset_time) VALUES (?,?,?,0)");
+	$q = $pdo->prepare("INSERT INTO sessions(session_id,code,time_seen) VALUES (?,?,?)");
 	$q->execute(array($sessionId, $code, time()));
 }
 
