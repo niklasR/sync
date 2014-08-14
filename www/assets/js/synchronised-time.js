@@ -18,6 +18,7 @@ $(document).ready(function() {
 	};
 	
 	function updateTimeOffset() {
+		var requestStartTime = new Date().getTime();
 		$.ajax({
 			url: baseUrl+"/ajax.php",
 			timeout: 3000,
@@ -28,7 +29,9 @@ $(document).ready(function() {
 			cache: false,
 			type: "POST"
 		}).done(function(data) {
-			offsetTime = new Date(data.payload).getTime() - new Date().getTime();
+			var currentTime = new Date().getTime();
+			var roundTripTime = currentTime - requestStartTime;
+			offsetTime = new Date(data.payload).getTime() - currentTime - (roundTripTime/2);
 		}).always(function() {
 			var delay;
 			if (updateCount <= 5) {
