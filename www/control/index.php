@@ -16,7 +16,7 @@ if ($_POST['form_submitted'] === "1") {
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>LA1:TV Sync Control</title>
+		<title>XTV Sync Control</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -30,7 +30,7 @@ if ($_POST['form_submitted'] === "1") {
 	</head>
 	<body data-baseurl="<?=e("http://".$_SERVER['SERVER_NAME'])?>">
 		<div id="main-container" class="container">
-			<h1 class="heading">LA1:TV Sync Control</h1>
+			<h1 class="heading">XTV Sync Control</h1>
 			<?php if (!is_null($addError)): ?>
 			<p class="bg-<?=$addError ? "danger" : "success"?>"><?=$addError ? "Could not find record." : "Record has been added!"?></p>
 			<?php endif; ?>

@@ -23,6 +23,7 @@ if (isset($_POST['action'])) {
 				"countdownTo"	=> is_null($row['countdown_to']) ? null : intval($row['countdown_to'], 10),
 				"flashTime"		=> is_null($row['flash_time']) ? null : intval($row['flash_time'], 10)
 			);
+			file_put_contents("TEST", $payload);
 			$result['payload'] = $payload;
 			$result['success'] = true;
 		}

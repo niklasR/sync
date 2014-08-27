@@ -108,6 +108,7 @@ $(document).ready(function() {
 			timeout: 4500,
 			type: "POST"
 		}).done(function(data) {
+			console.log(data);
 			var payload = data.payload;
 			setCode(payload.code);
 			setInstruction(payload.instruction);
